@@ -30,7 +30,9 @@ app.use(async (req, res, next) => {
 
     next();
 });
-
+app.get('/', (req, res) => {
+    res.json("Hello!!!!!")
+})
 app.get('/api/articles/:name', async (req, res) => {
     const { name } = req.params;
     const { uid } = req.user;
